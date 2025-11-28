@@ -6,7 +6,9 @@
   tasks:
   - name: Run command on remote devices
     commands:
-      - /system routerboard print
+      - /system 
+      - /routerboard 
+      - /print
     register: system_resource_print
   
   - name: Show system resources
