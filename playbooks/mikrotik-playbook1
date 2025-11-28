@@ -1,5 +1,0 @@
----
-all:
-  hosts:
-    mikrotik-LABOR:
-      ansible_host: 10.10.1.254
