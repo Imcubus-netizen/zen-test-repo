@@ -2,6 +2,5 @@
 - hosts: all
   tasks:
     - name: Run a command
-      community.routeros.command:
-        commands:
-          - /system resource print
+      commands:
+        - /system resource print
