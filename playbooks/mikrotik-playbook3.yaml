@@ -6,10 +6,15 @@
   gather_facts: false
   tasks:
   - name: Gather system resources
-    commands:
-      - /system resource print
+    community.routeros.command:
+      commands:
+        - /system resource print
     register: system_resource_print
 
   - name: Show system resources
     debug:
       var: system_resource_print.stdout_lines
+
+    commands:
+      - /system routerboard print
+      - /system identity print
