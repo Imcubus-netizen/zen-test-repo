@@ -32,7 +32,7 @@
         
     - name: Shutdown
       ansible.netcommon.cli_command:
-        commands: 
+        command: 
           - /system shutdown
         promtp:
           - "Shutdown, yes? [y/N]:"
