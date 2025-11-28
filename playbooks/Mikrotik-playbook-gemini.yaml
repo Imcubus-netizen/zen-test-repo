@@ -32,7 +32,7 @@
         
     - name: Shutdown
       community.routeros.command:
-        command: 
+        commands: 
           - /system shutdown
         prompt:
           - "Shutdown, yes? [y/N]:"
