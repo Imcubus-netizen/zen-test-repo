@@ -7,18 +7,18 @@
 
   tasks:
     - name: Gather system resources
-      community.routeros.command:     # <--- EZ hiányzott!
+      community.routeros.command:
         commands: 
           - /system resource print
       register: system_resource_print
 
-    - name: Show system resources
-      debug:
-        var: system_resource_print.stdout_lines
+#    - name: Show system resources
+#      debug:
+#        var: system_resource_print.stdout_lines
 
-    - name: Gather other info         # <--- A lógó parancsokat külön taskba tettem
-      community.routeros.command:
-        commands:
-          - /system routerboard print
-          - /system identity print
-      register: other_info            # Opcionális: ha látni is akarod, regisztráld
+#    - name: Gather other info
+#      community.routeros.command:
+#        commands:
+#          - /system routerboard print
+#          - /system identity print
+#      register: other_info
