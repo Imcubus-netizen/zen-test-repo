@@ -34,3 +34,7 @@
       community.routeros.command:
         commands: 
           - /system shutdown
+        promtp:
+          - "y/N"
+        answer:
+          - "y"
