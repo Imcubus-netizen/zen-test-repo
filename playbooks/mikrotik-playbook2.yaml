@@ -1,6 +1,8 @@
 ---
 - hosts: all
+  collections:
+    - community.routeros
   tasks:
     - name: Run command on remote devices
       community.routeros.command:
-        commands: system routerboard print
+        commands: /system routerboard print
