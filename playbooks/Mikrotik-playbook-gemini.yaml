@@ -38,3 +38,4 @@
           - "Shutdown, yes? [y/N]:"
         answer:
           - "y"
+      ignore_errors: true
