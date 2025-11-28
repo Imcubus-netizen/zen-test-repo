@@ -22,7 +22,7 @@
     - name: Gather other info
       community.routeros.command:
         commands:
-          - /system routerboard print
+          - /user print
           - /system identity print
       register: other_info
 
