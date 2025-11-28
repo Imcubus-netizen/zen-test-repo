@@ -6,8 +6,7 @@
   gather_facts: false
   tasks:
   - name: Gather system resources
-      commands:
-        - /system resource print
+      commands: /system resource print
     register: system_resource_print
 
   - name: Show system resources
