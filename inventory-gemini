@@ -1,0 +1,14 @@
+---
+all:
+  hosts:
+    mikrotik-LABOR:
+      ansible_host: 10.10.1.254
+  vars:
+    # Ez mondja meg, hogy ne másoljon Python fájlokat, hanem CLI-n kommunikáljon
+    ansible_connection: network_cli
+    
+    # Ez mondja meg, hogy a RouterOS specifikus parancsértelmezőt használja
+    ansible_network_os: community.routeros.routeros
+    
+    # Ha SSH-t használsz nem szabványos porton, itt állíthatod (opcionális):
+    # ansible_port: 22
