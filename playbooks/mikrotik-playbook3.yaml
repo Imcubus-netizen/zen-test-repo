@@ -1,6 +1,8 @@
 ---
 - name: RouterOS test with network_cli connection
   hosts: all
+  collections:
+    - community.routeros
   gather_facts: false
   tasks:
 
