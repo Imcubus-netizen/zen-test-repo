@@ -4,7 +4,10 @@
   gather_facts: false
   collections:
     - community.routeros
-
+  vars:
+    ansible_connection: network_cli
+    ansible_network_os: community.routeros.routeros
+    
   tasks:
     - name: Gather system resources
       community.routeros.command:
