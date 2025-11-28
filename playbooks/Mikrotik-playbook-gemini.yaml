@@ -34,7 +34,7 @@
       ansible.netcommon.cli_command:
         command: /system shutdown
         prompt:
-          - "Shutdown, yes? [y/N]:"
+          - "y/N"
         answer:
           - "y"
       ignore_errors: true
