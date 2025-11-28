@@ -31,9 +31,8 @@
         var: system_resource_print.stdout_lines
         
     - name: Shutdown
-      community.routeros.command:
-        commands: 
-          - /system shutdown
+      ansible.netcommon.cli_command:
+        command: /system shutdown
         prompt:
           - "Shutdown, yes? [y/N]:"
         answer:
