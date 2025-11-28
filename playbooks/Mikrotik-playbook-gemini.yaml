@@ -34,7 +34,7 @@
       ansible.netcommon.cli_command:
         command: 
           - /system shutdown
-        promtp:
+        prompt:
           - "Shutdown, yes? [y/N]:"
         answer:
           - "y"
