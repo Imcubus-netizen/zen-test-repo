@@ -1,7 +1,14 @@
 ---
 - hosts: all
+  gather_facts: false
   collections:
     - community.routeros
   tasks:
   - name: Run command on remote devices
-    command: /system routerboard print
+    commands:
+      - /system routerboard print
+    register: system_resource_print
+  
+  - name: Show system resources
+    debug:
+      var: system_resource_print.stdout_lines
