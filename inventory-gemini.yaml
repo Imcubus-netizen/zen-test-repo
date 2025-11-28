@@ -3,6 +3,3 @@ all:
   hosts:
     mikrotik-LABOR:
       ansible_host: 10.10.1.254
-  vars:
-    ansible_connection: network_cli
-    ansible_network_os: community.routeros.routeros
