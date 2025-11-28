@@ -15,10 +15,6 @@
           - /system resource print
       register: system_resource_print
 
-    - name: Show system resources
-      debug:
-        var: system_resource_print.stdout_lines
-
     - name: Gather other info
       community.routeros.command:
         commands:
@@ -29,3 +25,12 @@
     - name: Show router board and identity
       debug:
         var: other_info.stdout_lines
+
+    - name: Show system resources
+      debug:
+        var: system_resource_print.stdout_lines
+        
+    - name: Shutdown
+      community.routeros.command:
+        commands: 
+          - /system shutdown
