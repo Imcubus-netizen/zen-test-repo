@@ -35,6 +35,6 @@
         commands: 
           - /system shutdown
         promtp:
-          - "y/N"
+          - "Shutdown, yes? [y/N]:"
         answer:
           - "y"
