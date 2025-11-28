@@ -3,4 +3,4 @@
   tasks:
     - name: Run command on remote devices
       community.routeros.command:
-        command: /system routerboard print
+        commands: system routerboard print
