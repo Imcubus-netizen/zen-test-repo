@@ -1,0 +1,24 @@
+---
+- name: RouterOS test with network_cli connection
+  hosts: all
+  gather_facts: false
+  collections:
+    - community.routeros
+
+  tasks:
+    - name: Gather system resources
+      community.routeros.command:     # <--- EZ hiányzott!
+        commands: 
+          - /system resource print
+      register: system_resource_print
+
+    - name: Show system resources
+      debug:
+        var: system_resource_print.stdout_lines
+
+    - name: Gather other info         # <--- A lógó parancsokat külön taskba tettem
+      community.routeros.command:
+        commands:
+          - /system routerboard print
+          - /system identity print
+      register: other_info            # Opcionális: ha látni is akarod, regisztráld
